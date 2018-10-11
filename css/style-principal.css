@@ -1,0 +1,286 @@
+@font-face { 
+	font-family: Bavro; 
+	src: url('../fontes/Bavro-Regular.ttf'); 
+}
+
+@font-face { 
+	font-family: Montserrat; 
+	src: url('../fontes/Montserrat-ExtraLight.otf'); 
+}
+
+/* MUDAR O VISUAL DE TODO O CORPO DA PÁGINA */
+body{
+	background-image: url("../images/fase1-porao-escuro.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	overflow: hidden;
+}
+/* MUDAR O VISUAL DA CAIXA PRINCIPAL */
+#box-principal{
+	/* DEIXAR A POSIÇÃO RELACIONADA COM A PÁGINA */
+	position: absolute;
+	/* LARGURA */
+	width: 544px;
+	/* ALTURA */
+	height: 493px;    
+	/* TOPO DA CAIXA EM PORCENTAGEM PARA FICAR "RESPONSIVO" */
+    top: 50%;
+    /* LATERAL ESQUERDA DA CAIXA */
+    left: 50%;
+    /* PARA O TOPO E LATERAL ESQUERDA SEREM MUDADOS NO SEU EIXO CENTRAL E NÃO NO PRIMEIRO PONTO */
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+/* MUDAR O VISUAL DA IMAGEM DA CAIXA PRINCIPAL */
+.box-principal-imagem{
+	/* POSIÇÃO RELACIONADA COM A CAIXA PRINCIPAL */
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* MUDAR O VISUAL DO TEXTO PRINCIPAL */
+.box-principal-titulo{
+	font-family: 'Bavro', sans-serif;
+	font-size: 35px;
+	/* COR DO TEXTO */
+	color: #929292;
+	position: relative;
+	/* ALINHAR O TEXTO NO CENTRO HORIZONTAL DA PÁGINA */
+	text-align: center;
+	top: 14%;
+	transform: translate(0%, 10%);
+}
+
+#box-principal-nome{
+	position: absolute;
+	width: 295px;
+	height: 37px;	
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -35%); 
+}
+
+#box-principal-escolhePersonagem{
+	font-family: 'Montserrat', sans-serif;
+	color: #929292;
+	position: relative;
+	text-align: center;
+	top: 35%;
+	transform: translate(0%, 20%);
+}
+
+.personagem{
+	/* DEIXAR O FUNDO COM A COR BRANCA */
+	background-size: 100%;
+	position: relative;
+	/* DEIXAR OS ELEMENTOS FLUTUANDO EM DIREÇÃO A ESQUERDA */
+	float: left;	
+	width: 7.5%;
+	height: 8%;	
+	top: 33%;
+	left: 20%;
+	transform: translate(15%, 28%); 	
+	/* TER UMA MARGEM DE ESPAÇAMENTO NA LATERAL DIREITA */
+	margin-right: 2.6%;
+	/* DEIXAR O PONTEIRO DO MOUSE PRA SELECIONAR */
+	cursor: pointer;
+}
+
+.personagem:hover{
+	/*border: thick solid #929292;*/
+	outline:5px solid #646464;
+}
+
+#box-principal-personagem0{	
+	background-image: url("../images/icone-gatsby.png");
+}
+
+#box-principal-personagem1{	
+	background-image: url("../images/icone-daisy.png");
+}
+
+#box-principal-personagem2{	
+	background-image: url("../images/icone-nick.png");
+}
+
+#box-principal-personagem3{	
+	background-image: url("../images/icone-jordan.png");
+}
+
+#box-principal-personagem4{	
+	background-image: url("../images/icone-tom.png");
+}
+
+#box-principal-personagem5{	
+	background-image: url("../images/icone-myrtle.png");
+}
+
+/* ISSO AQUI VAI SAIR DAQUI É NOIS TAMO JUNTO */
+#daisy{
+	color: black;
+	position: relative;
+	text-align: center;
+	top: -50%;
+	cursor: pointer;
+}
+/* MUDAR O VISUAL DO BOTÃO DE ENTER */
+#box-principal-enter{
+	font-family: 'Montserrat', sans-serif;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, 0);	
+	/* AS BORDAS SEREM ARREDONDADAS E NÃO PONTUDAS */
+	cursor: pointer;
+}
+
+.fancy-btn{
+  display:inline-block;
+  position:relative;
+  padding:10px 20px;
+  border:2px solid #aeb2b7;
+  color:#aeb2b7;
+  font-family:arial;
+  font-size:20px;
+  text-decoration:none;
+  margin:20px auto;
+  transition: color 0.4s
+}
+
+.fancy-btn:after{
+  content:"     ";
+  border:2px solid rgba(0,0,0,0);
+  display:inline-block;
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+  transition:all 0.4s;
+}
+
+.fancy-btn:hover{
+  color:#aeb2b7;
+}
+
+.fancy-btn:hover:after{  
+  border:2px solid #aeb2b7;
+  width: calc(100% - 6px);
+  height: calc(100% + 13px); 
+}
+
+a:not([href]):not([tabindex]) {
+  color:#aeb2b7;
+}
+
+a:not([href]):not([tabindex]):hover {
+    color: #aeb2b7;
+}
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: white;
+  font-size: 0.875em;
+}
+
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+  color: white;
+}
+
+input::placeholder, textarea::placeholder {
+  color: white;
+  font-size: 0.875em;
+}
+
+input:focus::placeholder, textarea::focus:placeholder {
+  color: white;
+}
+
+input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
+  color: white;
+  font-size: 0.875em;
+}
+
+input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
+  color: white;
+}
+
+input:hover::placeholder, textarea:hover::placeholder {
+  color: white;
+  font-size: 0.875em;
+}
+
+input:hover:focus::placeholder, textarea:hover:focus::placeholder {
+  color: white;
+}
+
+input:hover::placeholder, textarea:hover::placeholder {
+  color: white;
+  font-size: 0.875em;
+}
+
+input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  
+  background: rgba(222, 222, 222, 0.2);
+  outline: none;
+  color: white;
+  
+  border: solid 1px white;
+  
+  transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+  background: #b3aca7;
+  color: white;
+}
+
+#inicio1 {
+    -webkit-animation: fadeinout 4s linear forwards;
+    animation: fadeinout 4s linear forwards;
+    opacity: 0;
+}
+
+#inicio2{
+	-webkit-animation: fadeinout 4s linear forwards;
+    animation: fadeinout 4s linear forwards;	
+}
+
+#inicio3{
+	-webkit-animation: fadeinout 4s linear forwards;
+    animation: fadeinout 4s linear forwards;	
+}
+
+@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+#box-principal-sobre{
+	position: fixed;
+	width: 15%;
+	height: 4%;
+	left: 83.6%;
+	top: 96.2%;	
+	cursor: pointer;
+}

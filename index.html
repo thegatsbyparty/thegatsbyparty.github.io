@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- TÍTULO DA PÁGINA --> 
+	<title>The Gatsby's Party</title>
+	<link rel="shortcut icon" type="image/png" href="images/TheGatsbysParty.png"/>
+	<!-- ORTOGRÁFIA COM ACENTOS -->
+	<meta charset="utf-8">
+	<!-- BASE DE RESPONSIVIDADE -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- CARREGAR OS ARQUIVOS CSS E JS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style-principal.css">
+	<link rel="stylesheet" type="text/css" href="css/style-quizz.css">
+	<link rel="stylesheet" type="text/css" href="css/style-progress.css">
+	<link rel="stylesheet" type="text/css" href="css/style-fase1.css">
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="js/p5.min.js"></script>
+	<script src="js/p5.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<!-- QUANDO A PÁGINA SER CARREGADA RODAR A FUNÇÃO trocaPagina(numero da página) NO JS -->
+<body>
+	<!-- DIV DA CAIXA PRINCIPAL -->
+	<div id="box-inicio">				
+		<img id="inicio1" src="./images/UFC.jpg">
+		<img id="inicio2" src="./images/SMD.jpg">
+		<img id="inicio3" src="./images/5Cloud.jpg">
+	</div>
+	<div id="box-principal">
+		<!-- IMAGEM DA CAIXA -->
+		<img class="box-principal-imagem" src="./images/box-principal-imagem.png">
+		<!-- NOME NA CAIXA -->
+		<h1 class="box-principal-titulo">THE GATSBY'S PARTY</h1>
+		<!-- CAMPO DE TEXTO DO NOME DO JOGADOR -->
+		<input type="text" id="box-principal-nome" placeholder="Enter your name">
+		<!-- TEXTO QUE FALA SOBRE A ESCOLHA DO PERSONAGEM -->
+		<p id="box-principal-escolhePersonagem">Choose a character:</p>
+		<!-- DIVS DA IMAGEM DE CADA PERSONAGEM, E QUANDO CLICA RODA A FUNÇÃO escolhePersonagem(numero do personagem) -->
+		<div id="box-principal-personagem0" class="personagem" title="Jay Gatsby" onclick="escolhePersonagem(0);"></div>
+		<div id="box-principal-personagem1" class="personagem" title="Daisy Buchanan" onclick="escolhePersonagem(1);"></div>
+		<div id="box-principal-personagem2" class="personagem" title="Nick Carraway" onclick="escolhePersonagem(2);"></div>
+		<div id="box-principal-personagem3" class="personagem" title="Jordan Baker" onclick="escolhePersonagem(3);"></div>
+		<div id="box-principal-personagem4" class="personagem" title="Tom Buchanan" onclick="escolhePersonagem(4);"></div>
+		<!-- <h1 id="daisy">J</h1> -->
+		<div id="box-principal-personagem5" class="personagem" title="Myrtle Wilson" onclick="escolhePersonagem(5);"></div>
+		<!-- BOTÃO DE ENTER, QUANDO CLICADO RODA A FUNÇÃO trocaPagina(numero da página) -->
+		<a class="fancy-btn" id="box-principal-enter" onclick="trocaPagina(1);">Enter</a>
+	</div>
+	<div id="box-principal-sobre" onclick="mostrarSobre()"></div>
+	<!-- CAIXA DO QUIZZ -->		
+	<div id="box-quizz">
+		<!-- PERGUNTA -->
+		<h2 id="pergunta"></h2>
+		<!-- ALTERNATIVAS, QUANDO CLICADAS RODA A FUNÇÃO selecionarAlternativa(numero da alternativa) -->
+		<h3 id="alternativa0" class="alternativas" onclick="selecionarAlternativa(0)"></h3>
+		<h3 id="alternativa1" class="alternativas" onclick="selecionarAlternativa(1)"></h3>
+		<h3 id="alternativa2" class="alternativas" onclick="selecionarAlternativa(2)"></h3>
+		<h3 id="alternativa3" class="alternativas" onclick="selecionarAlternativa(3)"></h3>
+		<i id="icon-check" class="fa fa-check" aria-hidden="true"></i>
+		<i id="icon-times" class="fa fa-times" aria-hidden="true"></i>
+		<!-- BOTÃO DE NEXT, QUANDO CLICADO RODA A FUNÇÃO mudaPergunta() -->
+		<!--<input type="submit" id="quizz-next" value="NEXT" onclick="mudaPergunta(1);">-->
+		<button type="button" id="quizz-next" class="btn btn-outline-dark" onclick="corrigirAlternativa();">NEXT</button>
+	</div>
+	<div id="box-progress">
+		<div id="box-progress-box">
+			<!-- IMAGEM DA CAIXA -->
+			<img class="box-principal-imagem" src="./images/box-principal-imagem.png">
+			<!-- NOME NA CAIXA -->
+			<h1 id="box-progress-titulo" class="box-principal-titulo">GATSBY'S MANSION</h1>
+			<p id="box-progress-sinopseFase">“In his blue gardens men and girls came and went like moths among the whisperings and the champagne and the stars.”</p>
+			<img id="fase-bloqueada" src="./images/fase2-bloqueada.png">
+			<!-- CAMPO DE TEXTO DO NOME DO JOGADOR -->
+			<a class="fancy-btn" id="box-progress-enter" onclick="trocaPagina(3)">Enter</a>
+		</div>
+		<img id="box-progress-seta-e" src="./images/ícone-seta.png" onclick="mudaFase(0)">
+		<img id="box-progress-seta-d" src="./images/ícone-seta.png" onclick="mudaFase(1)">
+	</div>
+	<div id="voltar">
+		<img id="voltar-btn" src="./images/ícone-setaV.png" onclick="voltar()">
+	</div>
+	<div id="fase1-SalaoPrincipal">
+		<div id="fase1-SalaoPrincipal-porta1" onclick="fase1(3)"></div>
+		<div id="fase1-SalaoPrincipal-porta2" onclick="fase1(2)"></div>
+		<div id="fase1-SalaoPrincipal-escada" onclick="fase1(4)"></div>
+		<div id="fase1-SalaoPrincipal-porta3" onclick="fase1(2)"></div>
+		<div id="fase1-SalaoPrincipal-porta4" onclick="fase1(6)"></div>
+		<div id="fase1-SalaoPrincipal-estatua" onclick="fase1(8)"></div>
+		<!--<div id="teste-algo" onclick="cofre()"></div>-->
+	</div>
+	<div id="fase1-Sala">
+		<div id="fase1-Sala-livroDG" onclick="lerLivros(1)"></div>
+		<div id="fase1-Sala-porta1" onclick="fase1(5)"></div>	
+		<div id="fase1-Sala-chaveJardim" onclick="pegaChave(1)"></div>	
+		<div id="fase1-Sala-banheiro" onclick="fase1(99)"></div>
+		<div id="fase1-Sala-janela0" onclick="fase1(16)"></div>
+		<div id="fase1-Sala-janela1" onclick="fase1(16)"></div>
+		<div id="fase1-Sala-cadeira" onclick="fase1(13)"></div>
+		<div id="fase1-Sala-sofa" onclick="fase1(13)"></div>
+		<div id="fase1-Sala-abajur0" onclick="fase1(12)"></div>
+		<div id="fase1-Sala-abajur1" onclick="fase1(12)"></div>
+		<div id="fase1-Sala-abajur2" onclick="fase1(12)"></div>
+		<div id="fase1-Sala-livros" onclick="fase1(25)"></div>
+		<div id="fase1-Sala-quadro" onclick="fase1(19)"></div>
+		<div id="fase1-Sala-vinho" onclick="fase1(26)"></div>
+		<div id="fase1-Sala-arquitetura" onclick="fase1(27)"></div>
+	</div>
+	<div id="fase1-Jardim">
+		<div id="fase1-Jardim-lanterna" onclick="pegaLanterna();"></div>
+		<div id="fase1-Jardim-chafariz" onclick="fase1(20);"></div>
+		<div id="fase1-Jardim-muro" onclick="fase1(28);"></div>
+		<div id="fase1-Jardim-mato0" onclick="fase1(29);"></div>
+		<div id="fase1-Jardim-mato1" onclick="fase1(29);"></div>
+		<div id="fase1-Jardim-ar0" onclick="fase1(30);"></div>
+		<div id="fase1-Jardim-ar1" onclick="fase1(30);"></div>
+	</div>
+	<div id="fase1-SalaVisitas">
+		<div id="fase1-SalaVisitas-livros" onclick="lerLivros(0);"></div>
+		<div id="fase1-SalaoVisitas-chaveBiblioteca" onclick="pegaChave(0);"></div>
+		<div id="fase1-SalaVisitas-lustre" onclick="fase1(10)"></div>
+		<div id="fase1-SalaVisitas-flores" onclick="fase1(11)"></div>
+		<div id="fase1-SalaVisitas-abajur0" onclick="fase1(12)"></div>
+		<div id="fase1-SalaVisitas-abajur1" onclick="fase1(12)"></div>
+		<div id="fase1-SalaVisitas-abajur2" onclick="fase1(12)"></div>
+		<div id="fase1-SalaVisitas-abajur3" onclick="fase1(12)"></div>
+		<div id="fase1-SalaVisitas-sofa" onclick="fase1(13)"></div>
+		<div id="fase1-SalaVisitas-sofa0" onclick="fase1(13)"></div>
+		<div id="fase1-SalaVisitas-cadeira" onclick="fase1(13)"></div>
+		<div id="fase1-SalaVisitas-janela0" onclick="fase1(16)"></div>
+		<div id="fase1-SalaVisitas-janela1" onclick="fase1(16)"></div>
+		<div id="fase1-SalaVisitas-janela2" onclick="fase1(16)"></div>
+		<div id="fase1-SalaVisitas-mesa" onclick="fase1(31)"></div>
+	</div>
+	<div id="fase1-PortaDG"></div>
+	<div id="fase1-SalaQuadros">
+		<div id="fase1-SalaQuadros-quadro0" onclick="abrirQuadro(0)"></div>
+		<div id="fase1-SalaQuadros-quadro1" onclick="abrirQuadro(1)"></div>
+		<div id="fase1-SalaQuadros-quadro2" onclick="abrirQuadro(2)"></div>
+		<div id="fase1-SalaQuadros-quadro3" onclick="abrirQuadro(3)"></div>
+		<div id="fase1-SalaQuadros-quadro4" onclick="abrirQuadro(4)"></div>
+		<div id="fase1-SalaQuadros-quadro5" onclick="abrirQuadro(5)"></div>
+		<div id="fase1-SalaQuadros-quadro6" onclick="abrirQuadro(6)"></div>
+		<div id="fase1-SalaQuadros-quadro7" onclick="abrirQuadro(7)"></div>
+		<div id="fase1-SalaQuadros-quadro8" onclick="abrirQuadro(8)"></div>
+		<img id="fase1-simbolos0" src="./images/fase1-simbolos.png">
+	</div>
+	<div id="fase1-Biblioteca">
+		<div id="fase1-Biblioteca-porta1" onclick="fase1(7)"></div>
+		<div id="fase1-Biblioteca-dg" onclick="fotoDG()"></div>
+		<div id="fase1-Biblioteca-prateleira0" onclick="fase1(14)"></div>
+		<div id="fase1-Biblioteca-prateleira1" onclick="fase1(14)"></div>
+		<div id="fase1-Biblioteca-quadro" onclick="fase1(19)"></div>
+		<div id="fase1-Biblioteca-simbolos" onclick="pegaSimbolos()"></div>
+		<div id="fase1-Biblioteca-parede" onclick="fase1(32)"></div>
+		<div id="fase1-Biblioteca-livros" onclick="fase1(33)"></div>
+		<div id="fase1-Biblioteca-cadeira0" onclick="fase1(13)"></div>
+		<div id="fase1-Biblioteca-cadeira1" onclick="fase1(13)"></div>
+		<div id="fase1-Biblioteca-escada" onclick="fase1(34)"></div>
+	</div>
+	<div id="fase1-SalaSecreta">
+		<div id="fase1-SalaSecreta-cofre" onclick="cofre()"></div>
+		<div id="fase1-SalaSecreta-espelho0" onclick="fase1(17)"></div>
+		<div id="fase1-SalaSecreta-espelho1" onclick="fase1(15)"></div>
+		<div id="fase1-SalaSecreta-cadeira0" onclick="fase1(13)"></div>
+		<div id="fase1-SalaSecreta-cadeira1" onclick="fase1(13)"></div>
+		<div id="fase1-SalaSecreta-cadeira2" onclick="fase1(13)"></div>
+		<div id="fase1-SalaSecreta-flores" onclick="fase1(35)"></div>
+		<div id="fase1-SalaSecreta-lustre" onclick="fase1(10)"></div>
+		<img id="fase1-simbolos1" src="./images/fase1-simbolos.png">
+	</div>
+	<div id="fase1-Porao">
+		<div id="fase1-Porao-lanterna"></div>
+		<div id="fase1-Porao-caixa" onclick="abreCaixaPorao()"></div>
+		<div id="fase1-Porao-gaveta0" onclick="fase1(21)"></div>
+		<div id="fase1-Porao-gaveta1" onclick="fase1(21)"></div>
+		<div id="fase1-Porao-brasao" onclick="fase1(22)"></div>
+		<div id="fase1-Porao-caixa1" onclick="fase1(23)"></div>
+		<div id="fase1-Porao-vinho0" onclick="fase1(26)"></div>
+		<div id="fase1-Porao-vinho1" onclick="fase1(26)"></div>
+		<div id="fase1-Porao-vinho2" onclick="fase1(26)"></div>
+		<div id="fase1-Porao-vinho3" onclick="fase1(26)"></div>
+		<div id="fase1-Porao-vinho4" onclick="fase1(26)"></div>
+	</div>
+	<div id="fase1-PortaSalaDeVisitas"></div>
+	<div id="pre-fim">
+		<a class="fancy-btn" id="fase1-pre-fim-next" onclick="trocaPagina(13)">Finish</a>
+	</div>
+	<div id="fase1-fim">
+		<div class="jogo-creditos" id="jogo-creditos-id">
+			<div class="jogo-creditos-titulo">The Gatsby's Party</div>
+			<div class="jogo-creditos-cargo">Created by</div>
+			<div class="jogo-creditos-nome">5 C l o u d</div>
+			<div class="jogo-creditos-cargo">Based on the novel by</div>
+			<div class="jogo-creditos-nome">F. Scott Fitzgerald</div>
+			<div class="jogo-creditos-cargo">Team</div>
+			<div class="jogo-creditos-nome">Arlindo Júnior</div>
+			<div class="jogo-creditos-nome">Davi Calisto</div>
+			<div class="jogo-creditos-nome">Espedito Roza</div>
+			<div class="jogo-creditos-nome">Sarah Isabelle</div>
+			<div class="jogo-creditos-nome">Vinícius Carlos</div>
+			<div class="jogo-creditos-cargo">Game Designed by</div>
+			<div class="jogo-creditos-nome">Arlindo Junior</div>
+			<div class="jogo-creditos-nome">Davi Calisto</div>
+			<div class="jogo-creditos-cargo">Writed by</div>
+			<div class="jogo-creditos-nome">Arlindo Junior</div>
+			<div class="jogo-creditos-nome">Sarah Isabelle</div>
+			<div class="jogo-creditos-cargo">Programmed by</div>
+			<div class="jogo-creditos-nome">Vinícius Carlos</div>
+			<div class="jogo-creditos-cargo">Designed and Illustrated by</div>
+			<div class="jogo-creditos-nome">Espedito Roza</div>
+			<div class="jogo-creditos-cargo">Translation by</div>
+			<div class="jogo-creditos-nome">Sarah Isabelle</div>
+			<div class="jogo-creditos-cargo">Typography by</div>
+			<div class="jogo-creditos-nome">Julieta Ulanovsky - Montserrat Light</div>
+			<div class="jogo-creditos-nome">Marcelo Reis Melo - Bavro</div>
+			<div class="jogo-creditos-cargo">Music by</div>
+			<div class="jogo-creditos-nome">Lewis Lueng</div>
+			<div class="jogo-creditos-cargo">Professors</div>
+			<div class="jogo-creditos-nome">Claudiney Moreira Mendoça Junior</div>
+			<div class="jogo-creditos-nome">Georgia da Cruz Pereira</div>
+			<div class="jogo-creditos-nome">Jose Aires Castro Filho</div>
+			<div class="jogo-creditos-nome">Paula Marques de Carvalho</div>
+			<div class="jogo-creditos-nome">Raquel Santiago Freire</div>
+			<div class="jogo-creditos-nome">Ricardo Brauner dos Santos</div>
+			<div class="jogo-creditos-cargo">Monitors</div>
+			<div class="jogo-creditos-nome">Gabriel de Paula</div>
+			<div class="jogo-creditos-nome">Nathan</div>
+			<div class="jogo-creditos-nome">Ravena Barroso</div>
+			<div class="jogo-creditos-cargo">Institution</div>
+			<div class="jogo-creditos-nome">Universidade Federal do Ceará</div>
+			<div class="jogo-creditos-cargo">Course</div>
+			<div class="jogo-creditos-nome">Sistemas e Mídias Digitais</div>  
+		</div>
+		<a class="fancy-btn" id="fase1-fim-next" onclick="trocaPagina(14)">Finish</a>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel"></h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- BOX MENTOR -->
+	<div class="modal fade" id="box-mentor" tabindex="-1" role="dialog" aria-labelledby="box-mentor-Label" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="box-mentor-Label">Character</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <p id="box-mentor-fala">yeeey</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" id="box-mentor-continuar" class="btn btn-primary" data-dismiss="modal">Continue</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- BOX DG -->
+	<div class="modal fade bd-example-modal-lg" id="box-dg" tabindex="-1" role="dialog" aria-labelledby="box-dg-Label" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	       	<h5 class="modal-title" id="box-dg-Label">Finish the puzzle to continue.</h5>
+	      </div>
+	      <div class="modal-body">
+	        <!--<p id="box-mentor-fala">Ache as fotos de Daisy e Gatsby, gatan.</p>
+	        <button type="button" class="btn btn-success" onclick="fase1(1)" data-dismiss="modal">Sou uma gata</button>-->
+	        <div id="box-dg-board">
+	        	<div id="box-dg-end">
+		        	<div id="box-dg-result">
+			        	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					</div>
+		        </div>
+	        	<div id="box-dg-image"></div>
+	        </div>
+	        <p id="box-dg-fala">This door isn’t locked but something is missing here. It looks like you’ll have to find a piece of paper, a photography or something like this.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger" onclick="voltar()" data-dismiss="modal">Back</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- BOX QUADRO -->
+	<div class="modal fade bd-example-modal-lg" id="box-quadro" tabindex="-1" role="dialog" aria-labelledby="box-quadro-Label" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <div class="modal-body">
+	      	<img id="fase1-SalaQuadros-quadro1-open" src="./images/quadro-1.jpg">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- BOX MINI-GAME PERSONAGEM -->
+	<div class="modal fade bd-example-modal-lg" id="box-game-personagem" tabindex="-1" role="dialog" aria-labelledby="box-game-personagem-Label" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="box-game-personagem-Label">Click on the pages to read and then match the character with the right description.</h5>
+	      </div>
+	      <div class="modal-body">
+	      	<div id="fase1-Biblioteca-pers0" title="Jay Gatsby"></div>
+	      	<div id="fase1-Biblioteca-pers1" title="Daisy Buchanan"></div>
+	      	<div id="fase1-Biblioteca-pers2" title="Nick Carraway"></div>
+	      	<div id="fase1-Biblioteca-pers3" title="Jordan Baker"></div>
+	      	<div id="fase1-Biblioteca-pers4" title="Tom Buchanan"></div>
+	      	<div id="fase1-Biblioteca-pers5" title="Myrtle Wilson"></div>
+	      	<div class="input-group">
+	      		<input type="checkbox" id="fase1-Biblioteca-check0" onclick="selecionarGamePersonagemTexto(0)">
+	      		<input type="checkbox" id="fase1-Biblioteca-check1" onclick="selecionarGamePersonagemTexto(1)">
+	      		<input type="checkbox" id="fase1-Biblioteca-check2" onclick="selecionarGamePersonagemTexto(2)">
+	      		<input type="checkbox" id="fase1-Biblioteca-check3" onclick="selecionarGamePersonagemTexto(3)">
+	      		<input type="checkbox" id="fase1-Biblioteca-check4" onclick="selecionarGamePersonagemTexto(4)">
+	      		<input type="checkbox" id="fase1-Biblioteca-check5" onclick="selecionarGamePersonagemTexto(5)">
+	      	</div>
+	      	<br>
+	      	<br>
+	      	<br>
+	      	<br>
+	      	<br>
+	      	<br>
+	      	<br>
+	      	<br>
+	      	<br>
+	      	<br>
+	      	<br>
+	      	<br>
+	      	<br>
+	      	<div class="input-group">
+	      		<input type="checkbox" id="fase1-Biblioteca-check6" onclick="selecionarGamePersonagemTexto(6)">
+	      		<input type="checkbox" id="fase1-Biblioteca-check7" onclick="selecionarGamePersonagemTexto(7)">
+	      		<input type="checkbox" id="fase1-Biblioteca-check8" onclick="selecionarGamePersonagemTexto(8)">
+	      		<input type="checkbox" id="fase1-Biblioteca-check9" onclick="selecionarGamePersonagemTexto(9)">
+	      		<input type="checkbox" id="fase1-Biblioteca-check10" onclick="selecionarGamePersonagemTexto(10)">
+	      		<input type="checkbox" id="fase1-Biblioteca-check11" onclick="selecionarGamePersonagemTexto(11)">
+	      	</div>
+	      	<div id="fase1-Biblioteca-text0" data-dismiss="modal" onclick="gamePersonagemTexto(0)"></div>
+	      	<div id="fase1-Biblioteca-text1" data-dismiss="modal" onclick="gamePersonagemTexto(1)"></div>
+	      	<div id="fase1-Biblioteca-text2" data-dismiss="modal" onclick="gamePersonagemTexto(2)"></div>
+	      	<div id="fase1-Biblioteca-text3" data-dismiss="modal" onclick="gamePersonagemTexto(3)"></div>
+	      	<div id="fase1-Biblioteca-text4" data-dismiss="modal" onclick="gamePersonagemTexto(4)"></div>
+	      	<div id="fase1-Biblioteca-text5" data-dismiss="modal" onclick="gamePersonagemTexto(5)"></div>
+	      	<br>
+	      	<br>
+	      	<br>
+	    	<br>
+	      	<br>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="voltar()">Back</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- BOX TEXTOS -->
+	<div class="modal fade" id="box-textos" tabindex="-1" role="dialog" aria-labelledby="box-textos-Label" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-body">
+	        <img id="box-textosImagem" src="./images/texto_daisy.jpg">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger" onclick="gamePersonagemTexto(99)" data-dismiss="modal">Back</button>	
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- BOX COFRE -->
+	<div class="modal fade" id="box-cofre" tabindex="-1" role="dialog" aria-labelledby="box-cofre-Label" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="box-cofre-Label">You will need the password to open this safe box. Some people use their birth year as password, let’s try to find some useful information to open it, there’s may be a code somewhere in this house.</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="tiraPapelSimbolos()">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	      	<b id="box-cofre-textSenha">Password</b>
+	        <input type="text" class="form-control" id="box-cofre-num0" maxlength="1">
+	        <input type="text" class="form-control" id="box-cofre-num1" maxlength="1">
+	        <input type="text" class="form-control" id="box-cofre-num2" maxlength="1">
+	        <input type="text" class="form-control" id="box-cofre-num3" maxlength="1">
+	        <br>
+	        <br>
+	        <br>
+	        <br>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="tiraPapelSimbolos()">Back</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- BOX COFRE ABERTO -->
+	<div class="modal fade" id="box-cofre-aberto" tabindex="-1" role="dialog" aria-labelledby="box-cofre-aberto-Label" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-body">
+	      	<img id="box-cofre-aberto-cofre" src="./images/fase1-cofreCheio.jpg">
+	      	<div id="box-cofre-aberto-chavePorao" data-dismiss="modal" onclick="pegaChavePorao()"></div>
+	      	<div id="box-cofre-aberto-coleira" onclick="lerLivros(2)"></div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary" data-dismiss="modal">Continue</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- BOX TM -->
+	<div class="modal fade" id="box-tm" tabindex="-1" role="dialog" aria-labelledby="box-tm-Label" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="box-tm-Label"></h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-footer">
+	         <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="lerLivros(20)">Continue</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- BOX CAIXA FINAL -->
+	<div class="modal fade" id="box-caixa-aberta" tabindex="-1" role="dialog" aria-labelledby="box-caixa-aberta-Label" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-body">
+	      	<img id="box-caixa-aberta-caixa" src="./images/fase1-caixa.jpg">
+	      	<div id="box-caixa-aberta-caixa-papel" onclick="caixaPapel()"></div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- OUTRO MENTOR -->
+	<div class="modal fade" id="box-mentor0" tabindex="-1" role="dialog" aria-labelledby="box-mentor0-Label" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="box-mentor0-Label">Character</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <p id="box-mentor0-fala">yeeey</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" id="box-mentor0-no" class="btn btn-danger" data-dismiss="modal">No</button>
+	        <button type="button" id="box-mentor0-yes" class="btn btn-success" data-dismiss="modal" onclick="fase1(18)">Yes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- TEXTO FINAL -->
+	<div class="modal fade bd-example-modal-lg" id="myModal0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel0" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel0"></h5>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" id="myModal0-button" class="btn btn-primary" data-dismiss="modal" onclick="fase1(24)">Continue</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- SOBRE -->
+	<div class="modal fade" id="box-sobre" tabindex="-1" role="dialog" aria-labelledby="box-sobre-Label" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="box-sobre-Label">ABOUT 5 C L O U D</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <p id="box-sobre-fala">We are 5 students of Sistemas e Mídias Digitais at UFC, Arlindo Júnior (Game Designer), Davi Calisto (Game Designer), Espedito Rosa (Designer), Sarah Isabelle (Writter) and Vinicius Carlos (programmer) who loves what we do.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</body>
+</html>

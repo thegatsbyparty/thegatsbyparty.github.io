@@ -1,0 +1,1196 @@
+#fase1-SalaoPrincipal-porta1{
+	position: absolute;
+	width: 4.7%;
+	height: 30%;
+	left: 23.3%;
+	top: 50.6%;	
+	cursor: pointer;
+}
+
+#fase1-SalaoPrincipal-porta2{
+	position: absolute;
+	left: 31%;
+	top: 50%;
+	width: 9%;
+	height: 27%;		
+	cursor: pointer;
+}
+
+#fase1-SalaoPrincipal-porta3{
+	position: absolute;
+	left: 62%;
+	top: 50%;
+	width: 9%;
+	height: 27%;		
+	cursor: pointer;
+}
+
+#fase1-SalaoPrincipal-porta4{
+	position: absolute;
+	left: 73%;
+	top: 50.6%;
+	width: 4.7%;
+	height: 30%;		
+	cursor: pointer;
+}
+
+#fase1-SalaoVisitas-chaveBiblioteca{
+	position: absolute;
+	left: 32%;
+	top: 81%;
+	width: 1.5%;
+	height: 2.4%;		
+	cursor: pointer;
+}
+
+#fase1-SalaoPrincipal-escada{
+	position: absolute;
+	left: 46.3%;
+	top: 20%;
+	width: 8.7%;
+	height: 25.5%;		
+	cursor: pointer;	
+}
+
+#voltar-btn{
+	position: absolute;
+	width: 10%;
+	top: 3%;
+	left: 1%;	
+	transform: translate(-1%, -3%);	
+	cursor: pointer;
+	opacity: 0;
+}
+
+#fase1-SalaVisitas-livros{
+	position: absolute;
+	left: 38%;
+	top: 92%;
+	width: 4%;
+	height: 3.4%;		
+	cursor: pointer;
+}
+
+#fase1-SalaVisitas-lustre{
+	position: absolute;
+	left: 42%;
+	top: 7%;
+	width: 16%;
+	height: 9%;		
+	cursor: pointer;	
+}
+
+#fase1-SalaVisitas-flores{
+	position: absolute;
+	left: 47%;
+	top: 62%;
+	width: 7%;
+	height: 8%;		
+	cursor: pointer;
+}
+
+#fase1-SalaVisitas-abajur0{
+	position: absolute;
+	left: 37%;
+	top: 59%;
+	width: 4%;
+	height: 6%;		
+	cursor: pointer;
+}
+
+#fase1-SalaVisitas-abajur1{
+	position: absolute;
+	left: 61%;
+	top: 59%;
+	width: 4%;
+	height: 6%;		
+	cursor: pointer;
+}
+
+#fase1-SalaVisitas-abajur2{
+	position: absolute;
+	left: 85%;
+	top: 61%;
+	width: 3%;
+	height: 4%;		
+	cursor: pointer;
+}
+
+#fase1-SalaVisitas-abajur3{
+	position: absolute;
+	left: 72%;
+	top: 61%;
+	width: 4%;
+	height: 6%;		
+	cursor: pointer;
+}
+
+#fase1-SalaVisitas-sofa{
+	position: absolute;
+	left: 12%;
+	top: 76%;
+	width: 10%;
+	height: 5%;		
+	cursor: pointer;
+}
+
+#fase1-SalaVisitas-cadeira{
+	position: absolute;
+	left: 68%;
+	top: 70%;
+	width: 6%;
+	height: 20%;		
+	cursor: pointer;
+}
+
+#fase1-Sala-porta1{
+	position: absolute;
+	left: 71%;
+	top: 30%;
+	width: 7%;
+	height: 19%;		
+	cursor: pointer;
+}
+
+#fase1-SalaQuadros-quadro0{
+	position: absolute;
+	left: 30%;
+	top: 11%;
+	width: 11.2%;
+	height: 19%;		
+	cursor: pointer;
+}
+
+#fase1-SalaQuadros-quadro1{
+	position: absolute;
+	left: 44.3%;
+	top: 11%;
+	width: 11.2%;
+	height: 19%;		
+	cursor: pointer;
+}
+
+#fase1-SalaQuadros-quadro2{
+	position: absolute;
+	left: 58.6%;
+	top: 11%;
+	width: 11.2%;
+	height: 19%;		
+	cursor: pointer;
+}
+
+#fase1-SalaQuadros-quadro3{
+	position: absolute;
+	left: 30%;
+	top: 34.3%;
+	width: 11.2%;
+	height: 19%;		
+	cursor: pointer;
+}
+
+#fase1-SalaQuadros-quadro4{
+	position: absolute;
+	left: 44.3%;
+	top: 34.3%;
+	width: 11.2%;
+	height: 19%;		
+	cursor: pointer;
+}
+
+#fase1-SalaQuadros-quadro5{
+	position: absolute;
+	left: 58.6%;
+	top: 34.3%;
+	width: 11.2%;
+	height: 19%;		
+	cursor: pointer;
+}
+
+#fase1-SalaQuadros-quadro6{
+	position: absolute;
+	left: 30%;
+	top: 56%;
+	width: 11.2%;
+	height: 19%;		
+	cursor: pointer;
+}
+
+#fase1-SalaQuadros-quadro7{
+	position: absolute;
+	left: 44.3%;
+	top: 56%;
+	width: 11.2%;
+	height: 19%;		
+	cursor: pointer;
+}
+
+#fase1-SalaQuadros-quadro8{
+	position: absolute;
+	left: 58.6%;
+	top: 56%;
+	width: 11.2%;
+	height: 19%;		
+	cursor: pointer;
+}
+
+#fase1-SalaQuadros-quadro1-open{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	background-color: red;
+}
+
+#fase1-Jardim-lanterna{
+	position: absolute;
+	width: 4%;
+	height: 4%;
+	left: 61%;
+	top: 68%;
+	cursor: pointer;
+	opacity: 0;
+}
+
+#fase1-Biblioteca-porta1{
+	position: absolute;
+	left: 17%;
+	top: 62%;
+	width: 4%;
+	height: 25%;		
+	cursor: pointer;
+}
+
+#fase1-Biblioteca-dg{
+	position: absolute;
+	left: 36%;
+	top: 89%;
+	width: 6%;
+	height: 5%;		
+	cursor: pointer;
+}
+
+#fase1-Biblioteca-prateleira0{
+	position: absolute;
+	left: 23%;
+	top: 8%;
+	width: 9%;
+	height: 76%;		
+	cursor: pointer;
+}
+
+#fase1-Biblioteca-prateleira1{
+	position: absolute;
+	left: 67%;
+	top: 8%;
+	width: 9%;
+	height: 76%;		
+	cursor: pointer;
+}
+
+#fase1-Biblioteca-quadro{
+	position: absolute;
+	left: 43.5%;
+	top: 44%;
+	width: 12%;
+	height: 18%;		
+	cursor: pointer;
+}
+
+#fase1-Biblioteca-game{
+	position: absolute;
+	left: 62.7%;
+	top: 73%;
+	width: 5%;
+	height: 8%;		
+	cursor: pointer;
+}
+
+#fase1-SalaSecreta-porao{
+	position: absolute;
+	left: 40%;
+	top: 77%;
+	width: 22%;
+	height: 4%;		
+	cursor: pointer;
+}
+
+#fase1-SalaSecreta-espelho0{
+	position: absolute;
+	left: 18%;
+	top: 17%;
+	width: 6%;
+	height: 45%;		
+	cursor: pointer;
+}
+
+#fase1-SalaSecreta-espelho1{
+	position: absolute;
+	left: 75%;
+	top: 17%;
+	width: 7%;
+	height: 48%;		
+	cursor: pointer;
+}
+
+#fase1-Biblioteca-pers0{
+	background-size: 100%;
+	background-image: url("../images/icone-gatsby.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 13.5%;
+	height: 20%;
+}
+
+#fase1-Biblioteca-check0{
+	position: relative;
+	left: 5.5%;
+	width: 3%;
+	transform: translate(0, 200%);
+}
+
+#fase1-Biblioteca-pers1{
+	background-size: 100%;
+	background-image: url("../images/icone-daisy.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 13.5%;
+	height: 20%;
+	margin-left: 16%;
+}
+
+#fase1-Biblioteca-check1{
+	position: relative;
+	left: 19%;
+	width: 3%;
+	transform: translate(0, 200%);
+}
+
+#fase1-Biblioteca-pers2{
+	background-size: 100%;
+	background-image: url("../images/icone-nick.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 13.5%;
+	height: 20%;
+	margin-left: 32%;
+}
+
+#fase1-Biblioteca-check2{
+	position: relative;
+	left: 32.5%;
+	width: 3%;
+	transform: translate(0, 200%);
+}
+
+#fase1-Biblioteca-pers3{
+	background-image: url("../images/icone-jordan.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	position: absolute;
+	width: 13.5%;
+	height: 20%;
+	margin-left: 48.5%;
+}
+
+#fase1-Biblioteca-check3{
+	position: relative;
+	left: 47%;
+	width: 3%;
+	transform: translate(0, 200%);
+}
+
+#fase1-Biblioteca-pers4{
+	background-image: url("../images/icone-tom.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	position: absolute;
+	width: 13.5%;
+	height: 20%;
+	margin-left: 65%;
+}
+
+#fase1-Biblioteca-check4{
+	position: relative;
+	left: 61.5%;
+	width: 3%;
+	transform: translate(0, 200%);
+}
+
+#fase1-Biblioteca-pers5{
+	background-image: url("../images/icone-myrtle.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	position: absolute;
+	width: 13.5%;
+	height: 20%;
+	margin-left: 81.5%;
+}
+
+#fase1-Biblioteca-check5{
+	position: relative;
+	left: 75%;
+	width: 3%;
+	transform: translate(0, 200%);
+}
+
+#fase1-Biblioteca-text0{
+	background-size: 100%;
+	background-image: url("../images/texto_tomP.jpg");
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 13.5%;
+	height: 20%;
+	cursor: pointer;
+}
+
+#fase1-Biblioteca-text1{
+	background-size: 100%;
+	background-image: url("../images/texto_jordanP.jpg");
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 13.5%;
+	height: 20%;
+	margin-left: 16%;
+	cursor: pointer;
+}
+
+#fase1-Biblioteca-text2{
+	background-size: 100%;
+	background-image: url("../images/texto_gatsbyP.jpg");
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 13.5%;
+	height: 20%;
+	margin-left: 32%;
+	cursor: pointer;
+}
+
+#fase1-Biblioteca-text3{
+	background-size: 100%;
+	background-image: url("../images/texto_myrtleP.jpg");
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 13.5%;
+	height: 20%;
+	margin-left: 48.5%;
+	cursor: pointer;
+}
+
+#fase1-Biblioteca-text4{
+	background-size: 100%;
+	background-image: url("../images/texto_daisyP.jpg");
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 13.5%;
+	height: 20%;
+	margin-left: 65%;
+	cursor: pointer;	
+}
+
+#fase1-Biblioteca-text5{
+	background-size: 100%;
+	background-image: url("../images/texto_nickP.jpg");
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 13.5%;
+	height: 20%;
+	margin-left: 81.5%;
+	cursor: pointer;
+}
+
+
+#fase1-Biblioteca-check6{
+	position: relative;
+	left: 5.5%;
+	width: 3%;
+	transform: translate(0, 10%);
+}
+#fase1-Biblioteca-check7{
+	position: relative;
+	left: 19%;
+	width: 3%;
+	transform: translate(0, 10%);
+}
+#fase1-Biblioteca-check8{
+	position: relative;
+	left: 32.5%;
+	width: 3%;
+	transform: translate(0, 10%);
+}
+#fase1-Biblioteca-check9{
+	position: relative;
+	left: 47%;
+	width: 3%;
+	transform: translate(0, 10%);
+}
+#fase1-Biblioteca-check10{
+	position: relative;
+	left: 61.5%;
+	width: 3%;
+	transform: translate(0, 10%);
+}
+#fase1-Biblioteca-check11{
+	position: relative;
+	left: 75%;
+	width: 3%;
+	transform: translate(0, 10%);
+}
+
+#fase1-SalaSecreta-cofre{
+	position: absolute;
+	left: 46%;
+	top: 44%;
+	width: 7%;
+	height: 17%;		
+	cursor: pointer;
+}
+
+#fase1-Sala-chaveJardim{
+	position: absolute;
+	left: 82.6%;
+	top: 76%;
+	width: 2%;
+	height: 3%;		
+	cursor: pointer;	
+}
+
+#fase1-Sala-banheiro{
+	position: absolute;
+	left: 88%;
+	top: 28%;
+	width: 9%;
+	height: 30%;		
+	cursor: pointer;	
+}
+
+#fase1-Sala-janela0{
+	position: absolute;
+	left: 4%;
+	top: 12%;
+	width: 18%;
+	height: 50%;		
+	cursor: pointer;	
+}
+
+#fase1-Sala-janela1{
+	position: absolute;
+	left: 36%;
+	top: 18%;
+	width: 10%;
+	height: 20%;		
+	cursor: pointer;
+}
+
+#fase1-Sala-cadeira{
+	position: absolute;
+	left: 21%;
+	top: 68%;
+	width: 12%;
+	height: 12%;		
+	cursor: pointer;	
+}
+
+#fase1-Sala-sofa{
+	position: absolute;
+	left: 55%;
+	top: 65%;
+	width: 16%;
+	height: 12%;		
+	cursor: pointer;	
+}
+
+#fase1-Sala-livroDG{
+	position: absolute;
+	left: 46%;
+	top: 80%;
+	width: 4%;
+	height: 6%;		
+	cursor: pointer;
+}
+
+#teste-algo{
+	position: absolute;
+	left: 45%;
+	top: 62%;
+	width: 9%;
+	height: 6%;		
+	cursor: pointer;		
+	background-color: red;	
+}
+
+#box-cofre-textSenha{
+	position: relative;
+	left: -3%;
+}
+
+#box-cofre-num0{
+	position: relative;
+	left: 27%;
+	width: 10%;
+	transform: translate(0, 80%);
+	float: left;
+	margin-right: 2%;
+}
+
+#box-cofre-num1{
+	position: relative;
+	left: 27%;
+	width: 10%;
+	transform: translate(0, 80%);
+	float: left;
+	margin-right: 2%;
+}
+
+#box-cofre-num2{
+	position: relative;
+	left: 27%;
+	width: 10%;
+	transform: translate(0, 80%);
+	float: left;
+	margin-right: 2%;
+}
+
+#box-cofre-num3{
+	position: relative;
+	left: 27%;
+	width: 10%;
+	transform: translate(0, 80%);
+	float: left;
+	margin-right: 2%;
+}
+
+#box-dg-board {
+  width: 628px;
+  height: 334px;
+  margin: 0px auto;
+  border: 20px solid #252525;
+}
+
+#box-dg-image {
+  width: 600px;
+  height: 300px;
+}
+
+.pics {
+  height: 98px;
+  width: 98px;
+  float: left;
+  border: 1px solid #252525;
+  cursor: pointer;
+}
+
+.pics:hover {
+  background-color: orange;
+  opacity: .75;
+}
+
+.selected {
+  filter: sepia(1);
+  -webkit-filter: sepia(1);
+  -moz-filter: sepia(1);
+  -o-filter: sepia(1);
+  -ms-filter: sepia(1);
+}
+#bx-dg-end {
+  width: 600px;
+  height: 300px;
+}
+
+#bx-dg-result {
+  color: white;
+  font-size: 25px;
+  display: none;
+  background: rgba(0%, 0%, 0%, 0.75);
+  margin-top: 215px;
+  cursor: pointer;
+  text-align: right;
+  padding: 10px 15px 10px 0;
+}
+
+#box-dg-fala{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	position: relative;
+	text-align: center;
+	width: 50%;
+	left: 25.5%;
+	transform: translate(0, -200%);
+}
+
+#fase1-Porao-lanterna{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100vw;
+	height:100vh;
+	background-image: url("../images/fase1-porao.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	overflow: hidden;
+	clip:rect(0px,100px,100px,0px);
+	opacity: 0;
+	z-index: -1;
+}
+
+#box-cofre-aberto-chavePorao{
+	position: absolute;
+	width: 2%;
+	height: 12%;
+	top: 55%;
+	left: 68.7%;
+	z-index: 1;
+	cursor: pointer;
+}
+
+#box-cofre-aberto-coleira{
+	position: absolute;
+	width: 12%;
+	height: 8%;
+	top: 83%;
+	left: 64%;
+	z-index: 1;
+	cursor: pointer;	
+}
+
+#fase1-simbolos0{
+	position: absolute;
+	top: 64%;
+	left: 78%;
+	opacity: 0;
+}
+
+#fase1-simbolos1{
+	position: absolute;
+	top: 64%;
+	left: 78%;
+	opacity: 0;
+}
+
+#fase1-Biblioteca-simbolos{
+	position: absolute;
+	top: 71%;
+	left: 81%;
+	width: 4%;
+	height: 3%;
+	cursor: pointer;
+}
+
+#fase1-Porao-caixa{
+	position: absolute;
+	top: 64%;
+	left: 13%;
+	width: 5.8%;
+	height: 22%;
+	cursor: pointer;
+}
+
+#box-caixa-aberta-caixa-papel{
+	position: absolute;
+	width: 22%;
+	height: 19%;
+	top: 57.5%;
+	left: 39%;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.jogo-creditos {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 400px;
+  margin-left: -200px;
+  font: 300 30px/1 'Montserrat', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  animation: 60s credits linear infinite;
+}
+
+.jogo-creditos-titulo {
+  margin-bottom: 50px;
+  font-size: 50px;
+}
+
+.jogo-creditos-cargo {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.jogo-creditos-nome {
+  margin-bottom: 50px;
+  font-size: 35px;
+}
+
+@keyframes credits {
+    0% { top:  100%; }
+  100% { top: -500%; }
+}
+
+#fase1-fim-next{
+	font-family: 'Montserrat', sans-serif;
+	position: absolute;
+	top: 84%;
+	left: 94%;
+	transform: translate(-94%, 0);	
+	/* AS BORDAS SEREM ARREDONDADAS E NÃO PONTUDAS */
+	cursor: pointer;
+	opacity: 0;
+}
+
+#jogo-creditos-id{
+	opacity: 0;
+}
+
+#fase1-SalaoPrincipal-estatua{
+	position: absolute;
+	left: 79%;
+	top: 51%;
+	width: 5%;
+	height: 14%;		
+	cursor: pointer;
+}
+
+#fase1-Jardim-chafariz{
+	position: absolute;
+	left: 42%;
+	top: 54%;
+	width: 17%;
+	height: 20%;		
+	cursor: pointer;
+}
+
+#fase1-Porao-gaveta0{
+	position: absolute;
+	left: 33%;
+	top: 53%;
+	width: 10%;
+	height: 4%;		
+	cursor: pointer;		
+}
+
+#fase1-Porao-gaveta1{
+	position: absolute;
+	left: 60%;
+	top: 45%;
+	width: 10%;
+	height: 5%;		
+	cursor: pointer;		
+}
+
+#fase1-Porao-brasao{
+	position: absolute;
+	left: 47%;
+	top: 8%;
+	width: 8%;
+	height: 17%;		
+	cursor: pointer;	
+}
+
+#fase1-Porao-caixa1{
+	position: absolute;
+	left: 84%;
+	top: 65%;
+	width: 6%;
+	height: 22%;		
+	cursor: pointer;	
+}
+
+#fase1-SalaSecreta-cadeira0{
+	position: absolute;
+	left: 17%;
+	top: 68%;
+	width: 15%;
+	height: 24%;		
+	cursor: pointer;
+}
+
+#fase1-SalaSecreta-cadeira1{
+	position: absolute;
+	left: 69%;
+	top: 77%;
+	width: 9%;
+	height: 10%;		
+	cursor: pointer;	
+}
+
+#fase1-SalaVisitas-sofa0{
+	position: absolute;
+	left: 78%;
+	top: 70%;
+	width: 14%;
+	height: 18%;		
+	cursor: pointer;
+}
+
+#fase1-pre-fim-next{
+	font-family: 'Montserrat', sans-serif;
+	position: absolute;
+	top: 84%;
+	left: 94%;
+	transform: translate(-94%, 0);	
+	/* AS BORDAS SEREM ARREDONDADAS E NÃO PONTUDAS */
+	cursor: pointer;
+	opacity: 0;
+}
+
+#fase1-Sala-abajur0{
+	position: absolute;
+	left: 34%;
+	top: 52.5%;
+	width: 5%;
+	height: 5%;		
+	cursor: pointer;
+}
+
+#fase1-Sala-abajur1{
+	position: absolute;
+	left: 48%;
+	top: 47%;
+	width: 3%;
+	height: 6%;		
+	cursor: pointer;
+}
+
+#fase1-Sala-abajur2{
+	position: absolute;
+	left: 77.5%;
+	top: 56%;
+	width: 6%;
+	height: 8%;		
+	cursor: pointer;
+}
+
+#fase1-Sala-livros{
+	position: absolute;
+	left: 68.2%;
+	top: 80%;
+	width: 4%;
+	height: 4%;		
+	cursor: pointer;
+}
+
+#fase1-Sala-quadro{
+	position: absolute;
+	left: 80%;
+	top: 34%;
+	width: 6%;
+	height: 12%;		
+	cursor: pointer;
+}
+
+#fase1-Sala-vinho{
+	position: absolute;
+	left: 42%;
+	top: 65%;
+	width: 6%;
+	height: 13%;		
+	cursor: pointer;
+}
+
+#fase1-Sala-arquitetura{
+	position: absolute;
+	left: 52%;
+	top: 20%;
+	width: 15%;
+	height: 20%;		
+	cursor: pointer;
+}
+
+#fase1-Jardim-muro{
+	position: absolute;
+	left: 37%;
+	top: 10%;
+	width: 26%;
+	height: 20%;		
+	cursor: pointer;	
+}
+
+#fase1-Jardim-mato0{
+	position: absolute;
+	left: 8%;
+	top: 20%;
+	width: 20%;
+	height: 34%;		
+	cursor: pointer;	
+}
+
+#fase1-Jardim-mato1{
+	position: absolute;
+	left: 72%;
+	top: 20%;
+	width: 20%;
+	height: 34%;		
+	cursor: pointer;
+}
+
+#fase1-Jardim-ar0{
+	position: absolute;
+	left: 8%;
+	top: 65%;
+	width: 20%;
+	height: 40%;		
+	cursor: pointer;
+}
+
+#fase1-Jardim-ar1{
+	position: absolute;
+	left: 72%;
+	top: 65%;
+	width: 20%;
+	height: 40%;		
+	cursor: pointer;
+}
+
+#fase1-SalaVisitas-janela0{
+	position: absolute;
+	left: 7%;
+	top: 15%;
+	width: 17%;
+	height: 50%;		
+	cursor: pointer;	
+}
+
+#fase1-SalaVisitas-janela1{
+	position: absolute;
+	left: 43%;
+	top: 20%;
+	width: 14%;
+	height: 36%;		
+	cursor: pointer;	
+}
+
+#fase1-SalaVisitas-janela2{
+	position: absolute;
+	left: 76%;
+	top: 20%;
+	width: 14%;
+	height: 36%;		
+	cursor: pointer;	
+}
+
+#fase1-SalaVisitas-mesa{
+	position: absolute;
+	left: 43%;
+	top: 75%;
+	width: 16%;
+	height: 7%;		
+	cursor: pointer;		
+}
+
+#fase1-Biblioteca-parede{
+	position: absolute;
+	left: 34.5%;
+	top: 15%;
+	width: 29%;
+	height: 22%;		
+	cursor: pointer;
+}
+
+#fase1-Biblioteca-livros{
+	position: absolute;
+	left: 44%;
+	top: 82%;
+	width: 23%;
+	height: 12%;		
+	cursor: pointer;
+}
+
+#fase1-Biblioteca-cadeira0{
+	position: absolute;
+	left: 23%;
+	top: 86%;
+	width: 10%;
+	height: 10%;		
+	cursor: pointer;
+}
+
+#fase1-Biblioteca-cadeira1{
+	position: absolute;
+	left: 73%;
+	top: 86%;
+	width: 10%;
+	height: 10%;		
+	cursor: pointer;
+}
+
+#fase1-Biblioteca-escada{
+	position: absolute;
+	left: 13%;
+	top: 10%;
+	width: 8%;
+	height: 30%;		
+	cursor: pointer;		
+}
+
+#fase1-SalaSecreta-cadeira2{
+	position: absolute;
+	left: 33%;
+	top: 70%;
+	width: 6%;
+	height: 14%;		
+	cursor: pointer;
+}
+
+#fase1-SalaSecreta-flores{
+	position: absolute;
+	left: 62%;
+	top: 60%;
+	width: 7%;
+	height: 5%;		
+	cursor: pointer;
+}
+
+#fase1-SalaSecreta-lustre{
+	position: absolute;
+	left: 40%;
+	top: 5%;
+	width: 20%;
+	height: 10%;		
+	cursor: pointer;
+}
+
+#fase1-Porao-vinho0{
+	position: absolute;
+	left: 47%;
+	top: 27%;
+	width: 9%;
+	height: 10%;		
+	cursor: pointer;
+}
+
+#fase1-Porao-vinho1{
+	position: absolute;
+	left: 57%;
+	top: 6%;
+	width: 14%;
+	height: 30%;		
+	cursor: pointer;
+}
+
+#fase1-Porao-vinho2{
+	position: absolute;
+	left: 30%;
+	top: 6%;
+	width: 14%;
+	height: 30%;		
+	cursor: pointer;
+}
+
+#fase1-Porao-vinho3{
+	position: absolute;
+	left: 13%;
+	top: 37%;
+	width: 10%;
+	height: 8%;		
+	cursor: pointer;
+}
+
+#fase1-Porao-vinho4{
+	position: absolute;
+	left: 82%;
+	top: 37%;
+	width: 10%;
+	height: 8%;		
+	cursor: pointer;
+}

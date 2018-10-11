@@ -1,0 +1,88 @@
+/* MUDAR O VISUAL DA CAIXA DE QUIZZ */
+#box-quizz{
+	background-color: none;
+	position: absolute;
+	width: 50%;
+	height: 75%;	
+	top: 17%;
+	left: 5.1%;
+	/* DEIXAR COM A OPACIDADE MÍNIMA, OU SEJA, INVISÍVEL */
+	opacity: 0;
+}
+
+#pergunta{
+	font-family: 'Bavro', sans-serif;
+	font-size: 23px;
+	color: white;
+	position: absolute;
+	left: 3%;
+	top: 4%;
+}
+
+.alternativas{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px; 
+	background-color: transparent;
+	color: #bbb;
+	
+	text-align: center;
+	/* TER DUPLA BORDA */
+	border-style: double;
+	/* TER UM ESPAÇAMENTO ENTRE O TEXTO E BORDA, A ORDEM DO ESPEAÇAMENTO É NO SENTIDO HORÁRIO, COMEÇANDO
+		PELO TOPO */
+	padding: 1% 0% 1% 2%;
+	/* MARGEM DE ESPAÇAMENTO NA DIREITA */
+	margin-right: 10%;
+	cursor: pointer;
+}
+#alternativa0{
+	position: relative;
+	width: 80%;
+	top: 20%;
+	left: 3%;
+}
+#alternativa1{
+	position: relative;
+	width: 80%;
+	top: 24%;
+	left: 3%;
+}
+#alternativa2{
+	position: relative;
+	width: 80%;
+	top: 28%;
+	left: 3%;
+}
+#alternativa3{
+	position: relative;
+	width: 80%;
+	top: 32%;
+	left: 3%;
+}
+#quizz-next{
+	font-family: 'Montserrat', sans-serif;
+	position: absolute;
+	color: #bbb;
+	border-color: #bbb;
+	top: 92%;
+	left: 43.5%;
+	transform: translate(-43.5%, 0);
+	cursor: pointer;
+}
+
+#icon-check{
+	opacity: 0;
+	color: #bbb;
+	position: fixed;
+	font-size: 50px;
+	left: 49%;
+	/*transform: translate(-28%, -87%);*/
+}
+
+#icon-times{
+	opacity: 0;
+	color: #bbb;
+	position: fixed;
+	font-size: 50px;
+	left: 49%;
+}

@@ -1,0 +1,65 @@
+#box-progress{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+#box-progress-box{
+	position: absolute;
+	width: 544px;
+	height: 493px;    
+    top: 50%; 
+    left: 50%;  
+    transform: translate(-50%, -50%);
+}
+
+#box-progress-enter{
+	font-family: 'Montserrat', sans-serif;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, 0);	
+	/* AS BORDAS SEREM ARREDONDADAS E NÃO PONTUDAS */
+	cursor: pointer;
+}
+
+#box-progress-seta-e{
+	position: absolute;
+	width: 13%;
+	top: 50%;
+	left: 13%;	
+	transform: translate(-13%, -50%);	
+	cursor: pointer;
+}
+
+#box-progress-seta-d{
+	position: absolute;
+	width: 13%;
+	top: 44%;
+	left: 73%;	
+	transform: translate(-73%, -44%);	
+	-webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    opacity: 0;
+}
+
+#box-progress-sinopseFase{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 23.5px;
+	color: #929292;
+	position: relative;
+	text-align: center;
+	width: 70%;
+	left: 15%;
+	top: 20%;
+	transform: translate(0%, 10%);
+}
+
+#fase-bloqueada{
+	position: absolute;
+	opacity: 0;
+	z-index: -1;
+	top: -27.5%;
+	left: -75.5%;
+}
